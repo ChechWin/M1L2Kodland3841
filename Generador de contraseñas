@@ -1,0 +1,12 @@
+import random
+
+caracteres_contraseña = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()"
+longitud_contraseña = int(input("Escribe la longitud de tu contraseña"))
+
+contraseña_generada = ""
+
+for _ in range(longitud_contraseña):
+    indice_aleatorio = random.randint(0, caracteres_contraseña.index(caracteres_contraseña[-1]))
+    contraseña_generada += caracteres_contraseña[indice_aleatorio]
+
+print(contraseña_generada)
